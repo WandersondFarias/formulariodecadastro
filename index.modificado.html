@@ -1,0 +1,120 @@
+<!-- REQUISITOS DO DESAFIO
+
+
+[x]Retirada todas as tags <br> e manter o layout sem alteração visuais
+[x] Tirar o fieldset e manter o layout sem alterções visuais
+
+-  Ao passar o mouse sobre os botões de limpar e Enviar Dados:
+[x] Trocar a cor do fundo
+[x] Aumentar o botão
+[x] Trocar a cor da letra
+[x] Trocar a cor da borda
+[x] o cursor tem que ser da "mãozinha"
+
+[x] Alterar cores da bordas de todos os inputs
+[x] Alterar a fonte do projeto para "Nunito"
+[x] Alterar o backoground do formulario
+[x] Alterar a cor e tamanho dos texto dos Labels
+
+PODERIA COLOCAR UM {margin:0;} {padding:0;} {box-sizing: border-box} no {CSS}
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap" rel="stylesheet">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="title-register">Cadastro</h2>
+
+        <form action="" method="POST" accept="multipart/form-data">
+
+            <label for="nome">Nome</label>
+            <input type="textn" name="nome" id="nome" required>
+
+            <label for="email">Email</label>
+            <input type="text" name="email" id="Email" required>
+
+
+            <label for="idade">Idade</label>
+            <input type="number" name="idade" id="idade" required min="12" max="90">
+
+            <label for="data-nascimento">Data de nascimento</label>
+            <input type="date" name="data-nascimento" name="data-nascimento" required>
+            <!--
+   (vamos mudificar o jeito de fazer fazendo o com o lebal)
+-->
+            <label>Onde voçê possui conta:
+                <div>
+                    <label class="input-inline">
+                        <input type="checkbox" name="Instragram">
+                        Instragram
+                    </label>
+
+                    <label class="input-inline">
+                        <input type="checkbox" name="facebook">
+                        facebook
+                    </label>
+
+                    <label class="input-inline">
+                        <input type="checkbox" name="youtube">
+                        youtube
+                    </label>
+                </div>
+            </label>
+            <label>
+                Sexo
+                <div>
+                    <label class="input-inline">
+                        <input type="radio" name="genero" value="masculino">
+                        masculino
+                    </label>
+
+                    <label class="input-inline">
+                        <input type="radio" name="genero" value="feminino">
+                        feminino
+                    </label>
+                </div>
+            </label>
+            <label>Cor dos olhos
+                <input type="color" name="cor-dos-olhos">
+            </label>
+            <label> Biografia
+                <textarea name="BIO"></textarea>
+            </label>
+
+            <label>Foto de Perfil
+                <input class="input-block" type="file" name="arquivo" accept="images/*">
+            </label>
+            <label>Telefone
+                <input   class="input-block" type="tel" name="Telefone">
+            </label>
+
+            <label>Link do Perfio do facebook
+                <input  class="input-block" type="url" name="url">
+            </label>
+
+            <label>
+                Senha
+                <input  class="input-block" type="password" name="senha" min="6" max="8" required>
+            </label>
+
+            <button class="button-clear" type="reset" name="reset">Limpar</button>
+            <button class="button-submit"type="submit" name="submit">Enviar dados</button>
+
+        </form>
+    </div>
+    </fieldset>
+</body>
+
+</html>
